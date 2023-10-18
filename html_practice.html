@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+  <title>HTMLウェブサイト例</title>
+</head>
+
+<body>
+  <header>
+    <h1>(仮)高専ウェブサイト</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">高専について</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>(仮)高専ウェブサイトへようこそ</h2>
+    <p>練習用高専のポータルサイトです</p>
+    <button onclick="addCSS()" id="button">CSSを加える</button>
+
+  </main>
+  <footer>
+    <p>Copyright © Hoshito Furuno</p>
+  </footer>
+  <script>
+    let counter = 0
+    function addCSS() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> \n<link rel="stylesheet" href="/Users/hoshitofuruno/Downloads/HTMLの説明/style.css" />'
+        document.getElementById("button").innerHTML = 'CSSを無くす'
+      } else {
+        document.getElementById("head").innerHTML = '  <title>Example HTML Website</title> '
+        document.getElementById("button").innerHTML = 'CSSを加える'
+
+      }
+    }
+  </script>
+</body>
+
+</html>
